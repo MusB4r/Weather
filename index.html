@@ -6,124 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusB4r Weather</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="./img/icons8-weather.svg" type="icon" alt="https://iconos8.es/icon/qA3w9Yp2vY7r/weather">
+    <link rel="shortcut icon" href="./img/icons8-weather.svg" type="icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body onload="onLoad()">
-    <main id="main">
+    <main>
         <div class="container">
-            <div class="content">
+            <div class="elements-izq">
                 <header>
-                    <a href="#"><img src="./img/icons8-weather.svg" alt="https://iconos8.es/icon/qA3w9Yp2vY7r/weather"> MusB4r</a>
-
-                    <div class="container_date">
-                        <h2 id="date">date</h2>
-                        <h3 id="date2">date2</h3>
+                    <div class="logo">
+                        <img src="./img/icons8-weather.svg" alt="">
+                        <h1>MusB4r</h1>
                     </div>
-                    <div><input type="text" class="icon-placeholder" placeholder=""></div>
+                    <div class="fecha">
+                        <h3 id="date">date</h3>
+                        <p id="date2">date p</p>
+                    </div>
+                    <div class="buscador">
+                        <input id="city-input" type="text" placeholder="Search">
+                        <button id="submit-btn"><i class='bx bx-search-alt-2' ></i></button>
+                    </div>
                 </header>
-
-                <div class="today">
-                    <header>
-                        <h3>Today overview</h3>
-                        <h4>More details <i class='bx bxs-chevrons-right' ></i></h4>
-                    </header>
-                    <div class="today_elements">
-                        <div class="today_container">
-                            <h2><i class='bx bx-wind'></i></h2>
-                            <div>
-                                <h5>Wind Speed</h5>
-                                <div>
-                                    <h3 id="wind">Weather</h3>
-                                    <h3>m/s</h3>
-                                </div>
-                            </div>
+                <div class="info">
+                    <h4>Today overview</h4>
+                    <p>More detail <i class='bx bxs-chevrons-right'></i></p>
+                </div>
+                <div class="izq-content">
+                    <div class="box">
+                        <i><i class='bx bx-wind'></i></i>
+                        <div class="box-info">
+                            <p>Wind Speed</p>
+                            <h1 id="wind">Wind</h1>
                         </div>
-                        <div class="today_container">
-                            <h2><i class='bx bx-cloud-light-rain' ></i></h2>
-                            <div>
-                                <h5>Humidity</h5>
-                                <div>
-                                    <h3 id="humidity">humidity</h3><h3>%</h3>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="box">
+                        <i class='bx bx-droplet'></i>
+                        <div class="box-info">
+                            <p>Humidity</p>
+                            <h1 id="humidity"">Humidity</h1>
                         </div>
-                        <div class="today_container">
-                            <h2><i class='bx bx-water'></i></h2>
-                            <div>
-                                <h5>Pressure</h5>
-                                <div>
-                                    <h3 id="pressure">Pressure</h3>
-                                    <h3>hPa</h3>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="box">
+                        <i class='bx bx-water' ></i>
+                        <div class="box-info">
+                            <p>Pressure</p>
+                            <h1 id="pressure">Pressure</h1>
                         </div>
-                        <div class="today_container">
-                            <h2><i class='bx bx-cloud' ></i></h2>
-                            <div>
-                                <h5>Clouds</h5>
-                                <div>
-                                    <h3 id="clouds">Clouds</h3>
-                                    <h3>%</h3>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="box">
+                        <i class='bx bx-cloud' ></i>
+                        <div class="box-info">
+                            <p>Clouds</p>
+                            <h1 id="clouds">Clouds</h1>
                         </div>
-                        
                     </div>
                 </div>
             </div>
-
-            <div class="info">
+            <div class="elements-drch">
                 <header>
-                    <div>
-                        <h2 id="location">City</h2>
-                        <h3 id="country">Country</h3>
+                    <div><h1 id="city">City</h1>
+                        <p id="country">Country</p>
                     </div>
-                    <h2 id="time">time</h2>
+                    <h2 id="time">Time</h2>
                 </header>
-
-                <div class="temperature">
-                    <header>
-                        <img id="weatherIconUrl" src="" alt="weather-icons">
-                    </header>
-                    <div class="conditions_clouds">
-                        <div class="temp_description">
-                            <h2 id="temperature">City</h2>
-                        </div>
-                        <div class="temp_description2">
-                            <h4 id="w_main" >Wmain</h4>
-                            <h4 id="w_description" >w_description</h4>
-                        </div>
+                <img src="" alt="" id="icon">
+                <div class="items">
+                    <p id="temperature">Temp</p>
+                    <div class="items-info">
+                        <p id="main">info1</p>
+                        <p id="description">info2 </p>
                     </div>
                 </div>
 
-                <hr>
+                <div><hr></div>
 
-                <div class="sunrise">
-                    <h2>Sunrise & Susent</h2>
-                        <div class="sunrise_content">
-                            <h3><i class='bx bxs-sun'></i></h3>
-                            <div class="s-content">
-                                <h4>Sunrise</h4>
-                                <h2 id="sunrise_id">time</h2>
-                            </div>
-                            <p id="timepass1">timepass</p>
+                <div class="suntime">
+                    <div class="sunss">
+                        <img src="./img/sunrise.png" alt="">
+                        <div>
+                            <p>Sunrise</p>
+                            <h2 id="sunrise">Time</h2>
                         </div>
-                        <div class="sunrise_content">
-                            <h3><i class='bx bx-sun' ></i></h3>
-                            <div class="s-content">
-                                <h4>Sunset</h4>
-                                <h2 id="sunset_id">time</h2>
-                            </div>
-                            <p id="timepass2">timepass</p>
+                        <div id="sunriseago">Ago</div> 
+                    </div>
+                    <div class="sunss">
+                        <img src="./img/sunset.png" alt="">
+                        <div>
+                            <p>Sunset</p>
+                            <h2 id="sunset">Time</h2>
                         </div>
+                        <div id="sunsetago">Ago</div>
+                    </div>
                 </div>
-                
+
+                </div>
             </div>
         </div>
     </main>
+    
     <script src="script.js"></script>
-    <script src="date.js"></script>
 </body>
+
 </html>
