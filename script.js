@@ -5,7 +5,7 @@ submitBtn.addEventListener('click', () => {
 const cityInput = document.getElementById('city-input');
 const cityName = cityInput.value;
 
-fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${APP_ID}`)
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${APP_ID}`)
     .then(response => response.json())
     .then(data => setWeatherData(data));
 });
